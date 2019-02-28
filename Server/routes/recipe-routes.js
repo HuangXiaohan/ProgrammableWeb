@@ -4,11 +4,6 @@ const Product = require('../models/Product')
 const Recipe = require('../models/Recipe')
 const fs = require('fs')
 var util = require('util')
-
-    
-    
-    
-    
     //route to recette page
     router.get('/recette', function (req, res) {
         res.render('product/recette')

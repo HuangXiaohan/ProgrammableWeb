@@ -11,6 +11,7 @@ import Signin from './components/Signin.vue';
 import Signup from './components/Signup.vue';
 import Profile from './components/Profile.vue';
 import RecipeDetail from './components/RecipeDetail.vue';
+import ModifierPrice from './components/ModifierPrice.vue';
 
 Vue.use(VueRouter);
 
@@ -50,6 +51,11 @@ const router = new VueRouter({
           path:'/recipedetail',
           name:'recipedetail',
           component: RecipeDetail,
+        },
+        {
+          path:'/modifierprice',
+          name:'modifierprice',
+          component: ModifierPrice,
         }
     ],
     mode:'history'

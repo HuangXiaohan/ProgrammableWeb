@@ -35,6 +35,7 @@
         <div class="row">
           <!-- <div class="card col-md-3 mr-sm-4 my-3" style="width: 18rem;" v-for="(item,index) in products"> -->
           <div class="card col-md-3 mr-sm-4 my-3" style="width: 18rem;" v-for="(item,index) in products">
+            <!-- <img  class="card-img-top" alt="..."> -->
             <div class="card-body">
               <h5 class="card-title">{{item.product_name}}</h5>
               <p class="card-text">{{item.categories}}</p>
@@ -72,7 +73,8 @@ export default {
       'product-detail': ProductDetail,
     },
     mounted() {
-      this.getDataInit();
+      //if(this.$route.path ==  '/')
+        this.getDataInit();
     },
     methods: {
         Search: function(){
@@ -131,6 +133,11 @@ export default {
               }
                 
             });
+        },
+        getImgUrl(pet) {
+          console.log(pet);
+          var images = require.context('../image/', false, /\.jpg$/);
+          return images('../image/' + pet + ".jpg")
         }
 
     }
